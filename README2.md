@@ -58,3 +58,13 @@ resource "hashicups_coffees" "example" {}
 data "hashicups_coffees" "example" {}
 
 ```
+
+
+## Check schema of provider json
+go to the direcotry where you have tf files.
+
+```
+terraform providers schema --json
+
+{"format_version":"1.0","provider_schemas":{"hashicorp.com/edu/hashicups":{"provider":{"version":0,"block":{"description_kind":"plain"}},"resource_schemas":{"hashicups_coffees":{"version":0,"block":{"attributes":{"configurable_attribute":{"type":"string","description":"Coffees configurable attribute","description_kind":"markdown","optional":true},"defaulted":{"type":"string","description":"Coffees configurable attribute with default value","description_kind":"markdown","optional":true,"computed":true},"id":{"type":"string","description":"Coffees identifier","description_kind":"markdown","computed":true}},"description":"Coffees resource","description_kind":"markdown"}}},"data_source_schemas":{"hashicups_coffees":{"version":0,"block":{"attributes":{"configurable_attribute":{"type":"string","description":"Coffees configurable attribute","description_kind":"markdown","optional":true},"id":{"type":"string","description":"Coffees identifier","description_kind":"markdown","computed":true}},"description":"Coffees data source","description_kind":"markdown"}}}}}}
+```
